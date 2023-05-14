@@ -1,0 +1,52 @@
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/navAdmin.ejs') %>
+
+        <div class="home">
+            <% if(news.length > 0) { %> 
+                <% news.forEach(news => { %>
+                    <div class="frame">
+                        <div class="image">
+                            <% if( news.imageUrl === "" ) { %>
+                                <p style="background-image: url('https://www.societaallestero.com/wp-content/themes/consultix/images/no-image-found-360x250.png');"></p> 
+                            <% } else { %>
+                                <p style="background-image: url('<%= news.imageUrl %>');"></p> 
+                            <% } %>
+                        </div>
+                        <div class="text">
+                            <h3><%= news.title %></h3>
+                            <p class="description"><%= news.description %></p>
+                            <a href="/news/admin/<%= news.id %>">Read more..</a>
+                        </div>
+                        <hr/>
+                        <div class="data">
+                            <div class="delete">
+                                <p class="newsDelete" data-delete="<%= news._id %>">&#128465;</p>
+                            </div>
+                            <div class="update">
+                                <p>&#9998;</p>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+
+        <script>
+            const bin = document.querySelector('p.newsDelete');
+            bin.addEventListener('click', (e) => {
+                const endpoint = `/news/admin/${bin.dataset.delete}`;
+                fetch(endpoint, {
+                    method: 'DELETE'
+                })
+                .then(response => response.json())
+                .then(data => window.location.href = data.redirect)
+                .catch((err) => console.log(err))
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/navGuest.ejs') %>
+        <div class="details">
+            <h1><%= news.title %></h1>
+            <% if( news.imageUrl === "" ) { %>
+                <p class="dImage" style="background-image: url('https://www.societaallestero.com/wp-content/themes/consultix/images/no-image-found-360x250.png');"></p> 
+            <% } else { %>
+                <p class="dImage" style="background-image: url('<%= news.imageUrl %>');"></p> 
+            <% } %>
+            </div>
+            <p class="body"><%= news.body %></p>
+        </div>
+    </body>
+</html>

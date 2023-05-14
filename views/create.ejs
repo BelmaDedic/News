@@ -1,0 +1,28 @@
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/navAdmin.ejs") %>
+        <div class="add-new">
+            <h2>Add a News</h2>
+            <div class="form">
+                <form action="/news" method="POST">
+                    <label for="imageUrl" class="label">Image url: </label>
+                    <input type="url" name="imageUrl">
+                    <br/>
+                    <label for="title" class="label">Title: </label>
+                    <input type="text" name="title" required>
+                    <br/>
+                    <label for="description" class="label">Description: </label>
+                    <input type="text" name="description" required>
+                    <br/>
+                    <label for="body" class="label">Body of news: </label>
+                    <textarea  rows="9" cols="59" name="body" required style="vertical-align: middle; font-size: large; padding: 5px; width: 450px;"></textarea>
+                    <br/>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

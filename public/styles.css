@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(234, 234, 234);
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(77, 10, 140);
+}
+
+.navbar button {
+    background-color: rgb(209, 235, 43);
+    border-radius: 4px;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgb(77, 10, 140);
+    border-color: rgb(77, 10, 140);
+    border: 1px solid;
+    font-size: 15px;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    width: 160px;
+    font-size: 18px;
+}
+
+.add {
+    margin: auto;
+}
+
+.home {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frame {
+    width: 225px;
+    min-height: 280px;
+    border: 1px solid;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.image p{
+    width: 224px;
+    height: 170px;
+    background-position: center;
+    background-size: cover;
+}
+
+.frame h3, .description {
+    padding: 2%;
+}
+
+.frame a {
+    padding-left: 2%;
+}
+
+.text {
+    min-height: 120px;
+}
+
+hr {
+    margin-top: 2%;
+}
+
+.data {
+    display: flex;
+    font-size: 29px;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .delete {
+    margin-left: 30%;
+    cursor: pointer;
+  }
+  
+  .update {
+    margin-right: 30%;
+  }
+  
+.details h1 {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.dImage {
+    width: 300px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.body {
+    margin: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 20px;
+}
+
+
+.add-new h2 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    color: rgb(23, 23, 23);
+    font-size: 28px;
+}
+
+.form {
+   text-align: center;
+}
+
+input {
+    margin-bottom: 2%;
+    font-size: large;
+    padding: 5px;
+    width: 450px;
+}
+
+.label {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    font-size: larger;
+}
+
+.form button {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    border-radius: 4px;
+    background-color: rgb(77, 10, 140);
+    color: rgb(188, 184, 184);
+    width: 80px;
+    padding: 2px;
+    font-size: 18px;
+}
